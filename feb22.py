@@ -13,10 +13,6 @@ Q2: ages = [10, 15, 16, 17. 95]
     'Hassan is 10 years old' should be printed in the case of Hassan and 10
 """
 print('Kassandrah')
-
-from ssl import PEM_FOOTER
-
-
 shoppinglist = ['cake', 'cashew', 'gum']
 
 sl = shoppinglist[0]
@@ -54,3 +50,23 @@ print('{} is {} years old'.format(people[2],ages[2]))
 print('{} is {} years old'.format(people[3],ages[3]))
 
 print('{} is {} years old'.format(people[4],ages[4]))
+
+print("\n\n\n\n")
+
+print("Kabir")
+# Q(a)
+Shoppinglist =['cake cashew gum']
+shoppinglist.upper()
+
+# Q(b)
+fruit=['cake','cashew','gum']
+fruit[1] ='Gum'
+fruit[2] = 'cashew'
+print(fruit)
+['cake', 'Gum', 'cashew']
+
+# Q2
+people=['Hassan', 'Adama', 'Bishir', 'saleh', 'Clement']
+ages=[10, 15, 16, 17, 95]
+iT='Hello',people[0],'is',ages[0],'years old'
+('Hello', 'Hassan', 'is', 10, 'years old')
