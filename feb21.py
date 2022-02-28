@@ -21,7 +21,7 @@ Create 2 list containing at least three items and get each item individually
 NOTE: Answers should be submitted within the same file and pushed to github. Indicate your name above your answer and ensure you don't submit the same answer as your collegues.
 """
  
-'''''
+
 # Kassandrah
 
 # (1) A list of whole numbers
@@ -153,11 +153,7 @@ print(v.swapcase [])
 v = "project y"
 print(v[-1]+v[0:7])
 print(v)
- 
 
 
-'''
-def decapitalize(sentence):
-    return sentence[:3].upper() + sentence[3:].lower()
-print( decapitalize("my name is usman, i am 15 years old. ") )
-
+sentence = "my name is usman, i am 15 years old."
+print(sentence[0:1])
