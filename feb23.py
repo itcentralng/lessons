@@ -114,3 +114,96 @@ print(d)
 print('remove helps us remove an item from a list using the value of the item')
 grades.remove('E')
 print(grades)
+
+
+
+
+print("   ")
+print("   ")
+print("Usman")
+print("(1a) Use the append method to add the following to the end of the list Mangoes, Berries, Watermelons")
+print(" ")
+Fruitlist = ['Apples', 'Oranges', 'Bananas', 'Cashews']
+print("fruitlist Befor append",Fruitlist)
+Fruitlist.append("Mangos")
+Fruitlist.append("Berries")
+Fruitlist.append("Watermelons")
+print("fruitlist after append",Fruitlist)
+print(" ")
+print("(1b)Use the insert method to add Guavas, Pineapples at index 5 and 3 respectively")
+print("   ")
+Fruitlist = ['Apples', 'Oranges', 'Bananas', 'Cashews']
+print("fruitlist B4 insert",Fruitlist)
+Fruitlist.insert(3,"Pineapples")
+Fruitlist.insert(5,"Guavas")
+print("fruitlist after insert",Fruitlist)
+
+print("   ")
+
+print("(1c) Use the insert method to repeat all the fruits at random indexes and find the index of all the last repeated items in the list")
+print("   ")
+Fruitlist = ['Apples', 'Oranges', 'Bananas', 'Cashews','Berries','Pineapples','Mangoes','watermelons','Guavas']
+Fruitlist.insert(4,"Apples")
+Fruitlist.insert(1,"Pineapples")
+Fruitlist.insert(7,"Bananas")
+Fruitlist.insert(8,"Oranges")
+Fruitlist.insert(9,"watermelons")
+Fruitlist.insert(3,"Guavas")
+Fruitlist.insert(12,"Berries")
+Fruitlist.insert(2,"Mangoes")
+Fruitlist.insert(6,"Cashews")
+print(Fruitlist)
+print("   ")
+
+print(Fruitlist.index("Apples",4))
+print(Fruitlist.index("Pineapples",2))
+print(Fruitlist.index("Bananas",10))
+print(Fruitlist.index("Oranges",6))
+print(Fruitlist.index("watermelons",14))
+print(Fruitlist.index("Guavas",13))
+print(Fruitlist.indext("Berries",11))
+print(Fruitlist.index("Mangoes",13))
+print(Fruitlist.index("Cashews",3))
+print("Q2: List all the methods available in the list class with explanation and an example")
+
+print("   ")
+
+# remove()
+print('remove helps us remove an item from a list using the value of the item')
+name = ("usman", "product")
+name.remove('a')
+print(name)
+
+# index()
+print('idex helps us confirm if a item exist in a list and returns its position an example')
+print(name.index('u'))
+
+# insert()
+print('insert helps us add a new item to a list ,specifying where we want it')
+product = name.insert('o','F')
+print(name)
+
+# append()
+print('the append method help to add a word to the end of a list an example it will add tiko to the end of the sentance')
+name.append('tiko')
+print(name)
+
+# clear()
+print('the clear method helps you remove all the items in your list and returns an empty list')
+name.clear()
+print(name)
+
+# pop()
+print('pop helps to remove a value from the list using the index of the item and can return the value removed an example is')
+tiko= name.pop(4)
+print(tiko)
+
+# count()
+print('count it helps to return the number of times a value appears in a list an example')
+print(name.count('usman abba usman'))
+
+# copy()
+print('copy returns a copy of items that is corently in the list an example is')
+tiko = name.copy()
+print(tiko)
+

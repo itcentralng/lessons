@@ -87,3 +87,61 @@ print(names[2])
 print(names[3])
 
 
+print("USMAN ABBA") 
+print("[1] A list of whole numbers.")
+Whole_Numbers = [100,200,300,40,59,68,79]
+print(Whole_Numbers)
+
+print("[2] A list containing names of students.")
+Name_Student = ['sani', 'mohammed', 'sulaiman', 'jamilu', 'usman']
+print(Name_Student)
+
+print("[3] A list of decimal numbers")
+_Decimal_numbers = [3.999, 200.9, 7.0,0.5, 9.4]
+print(_Decimal_numbers)
+
+print("[4] A list of whole numbers and decimal numbers")
+Dec_Whole = [50, 60, 90, 28, 4.6, 6.7, 8.0, 1.0]
+print(Dec_Whole)
+
+print("[5] A list containing names of students, whole numbers and decimal numbers")
+list = ['Jamilu', "Habib", 'Musa', 1,3,6,8,0,8,9,7,9,7,"Usman"]
+print(list)
+
+print("[6] A list containing numbers and other lists")
+Num_other = [70,40,60,9, ['name', 'school', 'student',]]
+print(Num_other)
+
+print("[7] A list containing decimal numbers and other list")
+decimal_other = [1.5, 90.4, 0.5, ["school", "student", "book", 4, 8,], ['class', 'lecture', 'totur']]
+print(decimal_other)
+
+print("[8] A list containing names of fruits and other lists")
+list_Frt = [{"frt": ['orange', 'apple', 'banana', 'coconut']},["name", 3, 4, 5, 6,"moimoi", "School"]]
+print(list_Frt)
+
+print("[9] A list containing numbers and other lists")
+numbers_other = [3, 6, 8, 90, ["Studet", "families", "friend"], ['food', "meet", 100, 50.0, "go"]]
+print(numbers_other)
+
+print("[10] A list containing numbers, names and other lists")
+name_num_others = ['Names'"parveen","zafreen","fatima","Rahama", "Num", 30, 6, 80, 90, 9, 'others', 4.5, "shop", "musa",3]
+print(name_num_others)
+
+print("Question 2:")
+print("[] Create 2 list and join them together on a third list")
+Whole_Numbers = [100,200,300,40,59,68,79]
+Name_Student = ['sani', 'mohammed', 'sulaiman', 'jamilu', 'usman']
+Value = Whole_Numbers + Name_Student
+print(Value)
+
+print("Question 3:")
+print("[] Create 2 list containing at least three items and get each item individually")
+items = ['A', 'B', 'C', 'D', 'E']
+print(items[0])
+print(items[1])
+print(items[2])
+print(items[3])
+print(items[4])
+
+print("thank you")
