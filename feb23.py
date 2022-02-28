@@ -207,3 +207,8 @@ print('copy returns a copy of items that is corently in the list an example is')
 tiko = name.copy()
 print(tiko)
 
+
+people=['Hassan', 'Adama', 'Bishir', 'saleh', 'Clement']
+ages=[10, 15, 16, 17, 95]
+iT='Hello',people[0],'is',ages[0],'years old'
+('Hello', 'Hassan', 'is', 10, 'years old')
