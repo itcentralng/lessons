@@ -30,6 +30,15 @@ q2 = "Create two new variables name and age that hold the name and age of Kabir 
 
 # Kassandrah
 """Write your answer below here"""
+print('Kassandrah')
+sentence = 'my Name is kabir, I am 15 years old.'
+print(sentence.capitalize().replace('kabir','Kabir').replace('i','I'))
+
+name='kabir'
+age ='15'
+print(name)
+print(age)
+
 
 # Amrah
 """Write your answer below here"""
