@@ -20,8 +20,7 @@ Create 2 list containing at least three items and get each item individually
 
 NOTE: Answers should be submitted within the same file and pushed to github. Indicate your name above your answer and ensure you don't submit the same answer as your collegues.
 """
- 
-'''''
+
 # Kassandrah
 
 # (1) A list of whole numbers
@@ -158,13 +157,3 @@ print(v)
 sentence = "my name is usman, i am 15 years old."
 Age = 15
 sentence.capitalize()
-'''
-
-from dataclasses import replace
-
-
-sentence = "my Name is kabir, i am 15 years old."
-sentence.replace('m','M' 1)
-#sentence.replece('n','N')
-sentence.replace('k', 'K')
-print(sentence)
