@@ -160,3 +160,11 @@ Age = 15
 sentence.capitalize()
 '''
 
+from dataclasses import replace
+
+
+sentence = "my Name is kabir, i am 15 years old."
+sentence.replace('m','M' 1)
+#sentence.replece('n','N')
+sentence.replace('k', 'K')
+print(sentence)
