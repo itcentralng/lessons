@@ -33,13 +33,16 @@ q2 = "Create two new variables name and age that hold the name and age of Kabir 
 print('Kassandrah')
 sentence = 'my Name is kabir, I am 15 years old.'
 print(sentence.capitalize().replace('kabir','Kabir').replace('i','I'))
+print(sentence.replace('m','M', 1).replace('N','n').replace('k','K'))
 
-name='kabir'
-age ='15'
+# question 2
+name =sentence[sentence.find('kabir'):sentence.find('kabir')+5]
 print(name)
-print(age)
-
-
+age = sentence[sentence.find('15'):sentence.find('15')+5]
+year =sentence[sentence.find('year'):sentence.find('year')+4]
+print(year)
+old = sentence[sentence.find('old'):sentence.find('old')+3]
+print(old)
 # Amrah
 """Write your answer below here"""
 
