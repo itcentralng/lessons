@@ -14,6 +14,7 @@
    
 2) Pick 5 string methods and explain how they work with proper executable examples
 """
+'''''
 # KASSANDRAH
 # (1) capitalize
 name = "Aisha Sani"
@@ -104,3 +105,77 @@ print(len(name))
 # slice(): the slice method helps you print a particular segment of the string as strings are divided into segments
 name = 'kassandrah'
 print(name[2:5])
+
+print ("   ")
+print ("   ")
+
+print("USMAN ASSIGNMENT")
+
+#Capitalize
+Name = 'usman Abba usman'
+Name.upper
+print(Name.upper())
+
+#Casefold
+Name = 'USMAN ABBA USMAN'
+Name.lower
+print(Name.lower())
+
+#Center
+fruth = 'banana,coconut,apple'
+fruth.center
+print(fruth.center(1))
+
+#Count
+items = 'banana_coconut_apple'
+items.count
+print(items.count('a'))
+
+#Format
+Age = 20
+print('My Age is: {}'. format(Age))
+
+#Strip
+product = 'coke fanta freshyo bobo'
+print(product.strip("coke"))
+
+#Replace
+school = 'fud ITcentral kadpoly'
+print(school.replace('fud' ,'ABU'))
+
+#Index
+Assignment = "introduction to python"
+print(Assignment.index("to"))
+
+#Swapcase
+Student = "KABIRU kassandra USMAN amrah JABIR"
+print(Student.swapcase())
+
+# join
+name = "R TEEY USMAN"
+K ='MU'
+print(name.join(K))
+
+print("thank you")
+'''
+name = ["A","B","C","D"]
+print(name[-1])
+print(name[-2])
+print(name[-3])
+print(name[-4])
+name.append(1)
+name.append(2)
+print(name)
+
+name.insert(-1,"usman",)
+name.insert(0,"Abba")
+print(name)
+
+name.index("A")
+name.index("D")
+print(name)
+
+name.pop(0)
+name.pop(-1)
+print(name)
+
