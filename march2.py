@@ -1,4 +1,3 @@
-'''
 q1 = """ My name is Jabir Bashir Kabir, remember me? Great! Please help with the same problem but this time use dictionaries"""
 print('kassandrah')
 # dictionary storage
@@ -32,7 +31,7 @@ totalp=14
 totalq=1000
 total = totalp*totalq
 print (f' you purchased {cartitems} for a total amount of {total} naira') 
-'''
+
 print("Usman Abba")
 print(" ")
 shopcart = {}
@@ -70,4 +69,6 @@ print('The total of cashew is',shopcart['2']['total'])
 print('The total of brownies is',shopcart['3']['total'])
 print('The total of zobo is',shopcart['4']['total'])
 print("  ")
-print("Thank you for purchissing")
+print("Thank you for purchessing")
+
+print( 'You have purchased {}, {}, {}, {} at a total of {}'.format(shopcart['1']['fruith is'], shopcart['2']['fruith is'] ,shopcart['3']['fruith is'], shopcart['4']['fruith is'], shopcart['1']['total']+shopcart['2']['total']+shopcart['3']['total']+shopcart['4']['total']))
