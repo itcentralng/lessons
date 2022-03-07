@@ -1,4 +1,3 @@
-'''
 people = [
             {"name": "Kabir", "age":12, 
              "school":{"name":"Alqalam", "state":"Katsina"}, 
@@ -22,7 +21,6 @@ people = [
             },
 ]
 
-<<<<<<< HEAD
 # q1: """ For each person in the list of people, print out a sentence stating their names, age, where they school and what they like doing """
 # q2: """ Create a variable that returns a sum of all the ages in the people list """
 # q3: """"Create a variable that returns a list of all school names """
@@ -56,10 +54,3 @@ print(f'{names[4]} is {ages[4]} years old from {school[4]} in {location[4]}, and
 print(f'the schools are : {school}')
 print (f'the ages sum up to {age}')
 print(f'the first hobbies of each person are: {hobby}')
-=======
-q1: """ For each person in the list of people, print out a sentence stating their names, age, where they school and what they like doing """
-q2: """ Create a variable that returns a sum of all the ages in the people list """
-q3: """" Create a variable that returns a list of all school names """
-q4: """ Create a variable that returns a list of all the first hobbies of each person"""
-'''
->>>>>>> 979e0c6cc1c71c80e77af3ae58db71401e0c573f
