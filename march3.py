@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> a5540e982ef8f8190477d8553e56bad36958ec78
 people = [
             {"name": "Kabir", "age":12, 
              "school":{"name":"Alqalam", "state":"Katsina"}, 
@@ -50,6 +53,7 @@ print(f'{names[4]} is {ages[4]} years old from {school[4]} in {location[4]}, and
 
 print(f'the schools are : {school}')
 print (f'the ages sum up to {age}')
+<<<<<<< HEAD
 print(f'the first hobbies of each person are: {hobby}')
 
 
@@ -89,3 +93,6 @@ print(' ')
 print(f'The first hobbies of each person are: {hobby}')
 print(' ')
 print('Sir i Beautify what kassandra did i try other ways but errow')
+=======
+print(f'the first hobbies of each person are: {hobby}')
+>>>>>>> a5540e982ef8f8190477d8553e56bad36958ec78
