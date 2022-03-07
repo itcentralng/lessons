@@ -147,7 +147,7 @@ print(items[4])
 print("thank you")
 
 c = "project x"
-print(v.swapcase [])
+print(c.swapcase)
 
 v = "project y"
 print(v[-1]+v[0:7])
