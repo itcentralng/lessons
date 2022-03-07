@@ -143,7 +143,6 @@ print(items[2])
 print(items[3])
 print(items[4])
 
-
 print("thank you")
 
 c = "project x"
