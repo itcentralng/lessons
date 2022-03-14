@@ -11,3 +11,7 @@
 
 # Identity Operators
 # is, is not
+
+# Comparison Operators
+# <, >, <=, >=, ==, !=
+
