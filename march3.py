@@ -63,3 +63,5 @@ q3: """" Create a variable that returns a list of all school names """
 q4: """ Create a variable that returns a list of all the first hobbies of each person"""
 '''
 >>>>>>> 979e0c6cc1c71c80e77af3ae58db71401e0c573f
+
+
