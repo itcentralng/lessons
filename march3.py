@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 25d4bebbb2b8d5eb2533c180e3b39b3625570a9f
 people = [
             {"name": "Kabir", "age":12, 
              "school":{"name":"Alqalam", "state":"Katsina"}, 
@@ -41,7 +44,6 @@ age=people[0]['age']+people[1]['age']+people[2]['age']+people[3]['age']+people[4
 
 hobby =people[0]['hobbies'][-2],people[1]['hobbies'][-2],people[2]['hobbies'][-2],people[3]['hobbies'][-2],people[4]['hobbies'][-2]
 
-# for person in names:
 print(f'{names[0]} is {ages[0]} years old from {school[0]} in {location[0]}, and loves {hobbies[0][-2]} and {hobbies[0][-1]}')
 print(f'{names[1]} is {ages[1]} years old from {school[1]} in {location[1]}, and loves {hobbies[1][-2]} and {hobbies[1][-1]}')
 print(f'{names[2]} is {ages[2]} years old from {school[2]} in {location[2]}, and loves {hobbies[2][-2]} and {hobbies[2][-1]}')
