@@ -1,4 +1,4 @@
-# """
+
 # Q1: Fruits = ['Apples', 'Oranges', 'Bananas', 'Cashews']
 #     Using the fruits list perform the following operations:
 #       (a) Use the append method to add the following to the end of the list:
@@ -56,7 +56,6 @@
 # # Q2: List all the methods available in the list class with explanation and an example.
 # # list methods
 
-<<<<<<< HEAD
 # # i. extend() 
 # print('the extend method works by taking a list or any other iterable and adds it to an already existing list an example is seen below')
 # grapes = ['red','purple']
@@ -120,11 +119,10 @@ fruits = ['oranges','berries','mango']
 fruits[::2]+[fruits[1]]
 fruits=[fruits[0] , fruits[2] , fruits[1]]
 print(fruits)
-=======
 # remove()
 print('remove helps us remove an item from a list using the value of the item')
-grades.remove('E')
-print(grades)
+fruits.remove('E')
+print(fruits)
 
 
 
@@ -223,4 +221,3 @@ people=['Hassan', 'Adama', 'Bishir', 'saleh', 'Clement']
 ages=[10, 15, 16, 17, 95]
 iT='Hello',people[0],'is',ages[0],'years old'
 ('Hello', 'Hassan', 'is', 10, 'years old')
->>>>>>> 979e0c6cc1c71c80e77af3ae58db71401e0c573f
