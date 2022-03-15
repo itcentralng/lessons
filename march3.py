@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 25d4bebbb2b8d5eb2533c180e3b39b3625570a9f
 people = [
             {"name": "Kabir", "age":12, 
              "school":{"name":"Alqalam", "state":"Katsina"}, 

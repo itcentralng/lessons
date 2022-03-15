@@ -64,6 +64,7 @@ Q2: students = [{'name':'Hassan Usman', 'age':15, 'voterStatus':''}]
     (a) Populate the list with 4 more students using the appropraite list method(s)
     (b) Use a conditional statement to update the voterStatus of each student taking the voting age as 18 years.
 
+<<<<<<< HEAD
 """
 
 print('kassandrah')
@@ -105,3 +106,38 @@ if age1 <18:
     print(f"you are underaged {students[1].get('name')}")
     print(f"you are underaged {students[2].get('name')}")
     print(f"you are underaged {students[3].get('name')}")
+=======
+
+from unicodedata import name
+"""
+
+print ("usman")
+#Q1a
+list = [0.1,0.2,6.8,0.4,7.5,0.6,8.7,0.8,7.9,-11.9]
+if list[-1] < 10:
+    print( ' the Decimal is less than 10')
+    list.append(0.9)
+    print(list)
+number = 5.8
+#Q1b
+for index in list:
+    if (index>=number):
+        print(index)
+        
+#Q1c 
+list = [0.1,0.2,6.8,0.4,7.5,0.6,8.7,0.8,7.9,-11.9,0.9]
+list.remove(0.9)
+print(list)
+
+#Q2a
+students = [{'name':'Hassan Usman', 'age':15,'voterStatus':''},
+            {'name':'Kabiru Ali', 'age':16, 'voterStatus':''},
+                {'name':'fatima Abubakar', 'age':13, 'voterStatus':''},
+                    {'name':'Aisha Abdul', 'age':17, 'voterStatus':''},
+                        {'name':'jamil musa', 'age':19, 'voterStatus':''}] 
+
+print(students)
+        
+        
+
+>>>>>>> 0d15b790b8b0cfa727155e0469533fc1be00b998
