@@ -102,8 +102,11 @@ age4=students[3].get('age')
 # print(age1,age2,age3,age4)
 if age1 <18:
     print(f"you are underaged {students[0].get('name')}")
+if age2 <18:
     print(f"you are underaged {students[1].get('name')}")
+if age3 <18:
     print(f"you are underaged {students[2].get('name')}")
+if age4 <18:
     print(f"you are underaged {students[3].get('name')}")
 
 """
