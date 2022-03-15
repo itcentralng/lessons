@@ -106,9 +106,7 @@ if age1 <18:
     print(f"you are underaged {students[2].get('name')}")
     print(f"you are underaged {students[3].get('name')}")
 
-from unicodedata import name
 """
-
 print ("usman")
 #Q1a
 list = [0.1,0.2,6.8,0.4,7.5,0.6,8.7,0.8,7.9,-11.9]
@@ -135,6 +133,4 @@ students = [{'name':'Hassan Usman', 'age':15,'voterStatus':''},
                         {'name':'jamil musa', 'age':19, 'voterStatus':''}] 
 
 print(students)
-        
-        .
-
+"""
