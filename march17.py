@@ -93,10 +93,10 @@ else:
 print('kbee')
     
 user={'phone_number':'+2348063599265','password':'1111'}
-phone_number=input('Please Enter phone number')
-password=input('Please Enter password')
-if phone_number == user.get('phone_number'):
-    if password == user.get('password'):
+phone_number=input('Please Enter your  phone number')
+password=input('Please Enter your password')
+if password == user:
+    if phone_number == user:
         print('login successful')
     else:
         print('Invalid password')
