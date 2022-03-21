@@ -92,24 +92,10 @@ else:
     
 print('kbee')
     
-users={
-    "user1":
-        {"password":1234,"phone_number":+2348033009998},
-    "user2":
-        {"password":3300,"phone_number":+2348063599265},
-    "user3":
-        {"password":1234,"phone_number":+2347019605435},
-    "user4":
-        {"password":1111,"phone_number":+2348019605435}
-    }
-    
-Password=1122
-phone_number=+2347033009998
-
-if Password in users:
-     if phone_number in users:
-             print("Login Successful")
-elif Password and phone_number not in users:
-     print("try again")
+user={'phone_number':+2348063599265,'password':1111}
+phone_number=input('Please Enter phone number')
+password=input('Please Enter password')
+if password and phone_number in user:
+    print('login successful')
 else:
-     print("User not found")
+    print('Check You Password Or Phone Number')
