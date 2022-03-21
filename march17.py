@@ -95,8 +95,55 @@ print('kbee')
 user={'phone_number':'+2348063599265','password':'1111'}
 phone_number=input('Please Enter phone number')
 password=input('Please Enter password')
-if password == user:
-    if phone_number == user:
+if phone_number == user.get('phone_number'):
+    if password == user.get('password'):
         print('login successful')
+    else:
+        print('Invalid password')
 else:
-    print('Check You Password Or Phone Number')
+    print('Invalid phone number')
+
+
+# CORRECTION
+print("CORRECTION")
+
+users = []
+
+print('Hello, welcome to our app please create an account')
+
+firstname = input("Enter your first name: ")
+lastname = input("Enter your last name: ")
+phone = input("Enter your phone number: ")
+password = input("Choose a password: ")
+
+if phone.startswith('0'):
+    phone = '+234'+phone[1:]
+elif phone.startswith('234'):
+    phone = '+'+phone
+elif phone.startswith('+234'):
+    phone = phone
+else:
+    phone = '+234'+phone
+
+new_user = {'name': firstname+' '+lastname, 'phone':phone, 'password':password}
+
+users.append(new_user)
+
+
+print("You are ready to join our awesomeness "+firstname)
+print("\n")
+print("Login to start......")
+print("\n")
+u = input("Enter your phone number: ")
+u = u.replace(" ", '').strip()
+p = input("Enter your password: ")
+
+if users[0].get('phone').endswith(u):
+    if users[0].get('password') == p:
+        print('Login successfull')
+        print("\n")
+        print("Welcome back "+users[0].get('name').split()[0])
+    else:
+        print('Invalid password')
+else:
+    print("Invalid phone number")
