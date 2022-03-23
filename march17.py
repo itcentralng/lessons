@@ -1,3 +1,4 @@
+"""
 database = {
     "jabir21":
         {"name":"Jabir", "password":"12345"},
@@ -65,7 +66,7 @@ else:
 
 print('\n\n')
 
-"""
+
 Assignment
 
 Q1: Write a program and allows users to login to a system with a phone number and password.
@@ -74,3 +75,4 @@ Q1: Write a program and allows users to login to a system with a phone number an
     The program should allow users to enter their phone numbers with or without their country code.
     It should also be able to recognize numbers that are in this format +234 813 123 123.
 """
+
