@@ -76,3 +76,58 @@ Using the language list above, answer the follwoing questions:
 3. Create a table and print out all the Eurpean languages
 NOTE all tables must have this heading: |Names|Population|Continent|Country|
 """
+
+
+print('Kassandrah')
+
+table = "|Name|Population|Continent|Country|\n"
+
+coutt= len(languages[3].get('country'))
+contin = len(languages[2].get('continent'))
+x = table.split('|')
+table = table.replace('Name', x[1].center(coutt, ' ')).replace('taste', x[3].center(contin, ' '))
+
+
+for lang in languages:
+	pop = f" {lang.get('population')}"
+	namee= f"{lang.get('name')}"
+	namee.center(coutt,' ')
+	continent=f"{lang.get('country')}"
+	continent.center(coutt,' ')
+	con=f"{lang.get('continent')}"
+	con.center(coutt,' ')
+	content = f"|{namee}|{pop}|{con}|{continent}|\n"
+	table+=content
+
+print(table)
+
+table2="|Name|Population|Continent|Country|\n"
+
+# for lang in languages:
+x=3
+for lang in languages:
+	if lang.get('population')>=2000:
+		pop = f" {lang.get('population')}"
+		namee= f"{lang.get('name')}"
+		namee.center(coutt,' ')
+		continent=f"{lang.get('country')}"
+		continent.center(coutt,' ')
+		con=f"{lang.get('continent')}"
+		con.center(coutt,' ')
+		content = f"|{namee}|{pop}|{con}|{continent}|\n"
+		table2+=content
+print(table2)
+
+table3="|Name|Population|Continent|Country|\n"
+for lang in languages:
+	if lang.get('continent')=='Europe':
+		pop = f" {lang.get('population')}"
+		namee= f"{lang.get('name')}"
+		namee.center(coutt,' ')
+		continent=f"{lang.get('country')}"
+		continent.center(coutt,' ')
+		con=f"{lang.get('continent')}"
+		con.center(coutt,' ')
+		content = f"|{namee}|{pop}|{con}|{continent}|\n"
+		table3+=content
+print(table3)
