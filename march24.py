@@ -134,6 +134,29 @@ print(table3)
 
 
 print('kbee')
+Q1
+table = "|Name|Population|Continent|Country|\n"
+
+iTcentral= len(languages[3].get('country'))
+continent = len(languages[2].get('continent'))
+x = table.split('|')
+table = table.replace('Name', x[1].center(iTcentral, ' ')).replace(' ', x[3].center(continent, ' '))
+
+
+for language in languages:
+	population = f" {language.get('population')}"
+    
+	name= f"{language.get('name')}"
+	name.center(iTcentral,' ')
+    
+	continent=f"{language.get('country')}"
+	continent.center(iTcentral,' ')
+
+	country=f"{language.get('continent')}"
+	country.center(iTcentral,' ')
+
+	content = f"|{name}|{population}|{country}|{continent}|\n"
+	table+=content
 languages = [
   {"name":"Hausa", "population":1000, "continent":"Africa", "country":"Nigeria"},
   {"name":"English", "population":7000, "continent":"Europe", "country":"England"},
@@ -141,6 +164,8 @@ languages = [
   {"name":"French", "population":2300, "continent":"Europe", "country":"France"},
   {"name":"Spanish", "population":3500, "continent":"Europe", "country":"Spain"}
 ]
+
+Q3
 table = "|Name|Population|Continent|Country|\n"
 for language in languages:
     if language.get('continent')=='Europe':
