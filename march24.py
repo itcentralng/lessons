@@ -131,3 +131,23 @@ for lang in languages:
 		content = f"|{namee}|{pop}|{con}|{continent}|\n"
 		table3+=content
 print(table3)
+
+
+print('kbee')
+languages = [
+  {"name":"Hausa", "population":1000, "continent":"Africa", "country":"Nigeria"},
+  {"name":"English", "population":7000, "continent":"Europe", "country":"England"},
+  {"name":"Arabic", "population":1200, "continent":"Asia", "country":"Saudi Arabia"},
+  {"name":"French", "population":2300, "continent":"Europe", "country":"France"},
+  {"name":"Spanish", "population":3500, "continent":"Europe", "country":"Spain"}
+]
+table = "|Name|Population|Continent|Country|\n"
+for language in languages:
+    if language.get('continent')=='Europe':
+    population = f"{language.get('population')}"
+    name=f"{language.get('name')}"
+    country=f" {language.get('country')}"
+    continent=f"{language.get('continent')}"
+    content = f"|{name}|{population}|{country}|{continent}|\n"
+    table+=content
+print(table)
