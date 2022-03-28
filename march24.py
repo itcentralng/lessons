@@ -65,15 +65,16 @@ languages = [
 
 """
 Using the language list above, answer the follwoing questions:
-1 - Write a code that print out all the languages in a table with their names, population, continent and country in format as below:
+1 - Write a code that prints out all the languages in a table with their names, 
+	population, continent and country in format as below:
 |Names|Population|Continent|Country|
 |Hausa|  1000    |  Africa |Nigeria|
 |Hausa|  1000    |  Africa |Nigeria|
 |Hausa|  1000    |  Africa |Nigeria|
 |Hausa|  1000    |  Africa |Nigeria|
 
-2. Create a table and print out all the fruits that have at least 2000 speakers
-3. Create a table and print out all the Eurpean languages
+2. Create a table and prints out all the languages that have at least 2000 speakers
+3. Create a table and prints out all the Eurpean languages
 NOTE all tables must have this heading: |Names|Population|Continent|Country|
 """
 
@@ -134,7 +135,7 @@ print(table3)
 
 
 print('kbee')
-Q1
+# Q1
 table = "|Name|Population|Continent|Country|\n"
 
 iTcentral= len(languages[3].get('country'))
@@ -157,22 +158,16 @@ for language in languages:
 
 	content = f"|{name}|{population}|{country}|{continent}|\n"
 	table+=content
-languages = [
-  {"name":"Hausa", "population":1000, "continent":"Africa", "country":"Nigeria"},
-  {"name":"English", "population":7000, "continent":"Europe", "country":"England"},
-  {"name":"Arabic", "population":1200, "continent":"Asia", "country":"Saudi Arabia"},
-  {"name":"French", "population":2300, "continent":"Europe", "country":"France"},
-  {"name":"Spanish", "population":3500, "continent":"Europe", "country":"Spain"}
-]
+print(table)
 
-Q3
+# Q3
 table = "|Name|Population|Continent|Country|\n"
 for language in languages:
-    if language.get('continent')=='Europe':
-    population = f"{language.get('population')}"
-    name=f"{language.get('name')}"
-    country=f" {language.get('country')}"
-    continent=f"{language.get('continent')}"
-    content = f"|{name}|{population}|{country}|{continent}|\n"
-    table+=content
+	if language.get('continent')=='Europe':
+		population = f"{language.get('population')}"
+		name=f"{language.get('name')}"
+		country=f" {language.get('country')}"
+		continent=f"{language.get('continent')}"
+		content = f"|{name}|{population}|{country}|{continent}|\n"
+		table+=content
 print(table)
