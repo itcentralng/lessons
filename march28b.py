@@ -32,11 +32,6 @@
 
 # # Q1:
 
-from msilib.sequence import tables
-from operator import index
-from re import M
-from turtle import position
-
 
 languages = [
     {"name":"Hausa", "speakers":1000},
@@ -47,13 +42,37 @@ languages = [
 
 # # determine the language that has the highest number of speakers
 # # assuming you can't see the data in the languages list above.
+
+print("CORRECTION")
+
+highest = {}
+for language in languages:
+    if language["speakers"] > highest.get("speakers", 0):
+        highest = language
+print(f"The language with the highest number of speakers is {highest['name']} with {highest['speakers']} speakers")
+
 print('Kassandrah')
-newlist = sorted(languages, key=lambda key: key['speakers'], reverse=True)       
+def _filter(key):
+    return key.get('speakers')
+newlist = sorted(languages, key=_filter, reverse=True)       
 highest = newlist[0]
 name=newlist[0].get('name')
 speakers=newlist[0].get('speakers')
 print(f'the {name} has the highest number of speakers with a total of {speakers}')
 
+print("Kabir")
+speakers=languages[0]['speakers'],+languages[1]['speakers'],+languages[2]['speakers'],+languages[3]['speakers']
+for language in languages:
+    if language == speakers:
+        print(language)
+    else:
+        print(max(speakers))
+        break
+print("Kabir v2")
+speakers = []
+for language in languages:
+    speakers.append(language['speakers'])
+print(max(speakers))
 
 # # Q2:
 
@@ -71,8 +90,11 @@ students = [
 
 
 print('\n\n')
+def _filter(key):
+    return key.get('score')
+
 table="|Name|scors|position|"
-newlist2=sorted(students,key=lambda k:k['score'],reverse=True)
+newlist2=sorted(students,key=_filter,reverse=True)
 for n in newlist2:
     namee=f"{n.get('name')}"
     score=f"{n.get('score')}"
@@ -81,3 +103,14 @@ for n in newlist2:
     print(content)
 
 
+print("CORRECTION")
+scores = [student['score'] for student in students]
+scores = sorted(scores, reverse=True)
+table = "|Name|Score|Position|\n"
+for student in students:
+    position = scores.index(student['score']) + 1
+    name = student['name']
+    score = student['score']
+    content = f"|{name:<6}|{score:<5}|{position:<5}|\n"
+    table += content
+print(table)
