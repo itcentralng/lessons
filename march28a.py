@@ -1,3 +1,4 @@
+'''
 """Assignment"""
 
 languages = [
@@ -60,3 +61,27 @@ for language in languages:
     if continent == 'Europe':
         table3 += f"|{name:<10}|{population:<10}|{continent:<10}|{country:<15}|\n"
 print(table3)
+'''
+import numbers
+
+
+fruits =[
+    {"name":"apple","price":100},
+    {"name":"banana","price":200},
+    {"name":"orange","price":300},
+    {"name":"grape","price":400},
+    {"name":"mango","price":500}
+    ]
+table = f"|{'Name':}|{'price':}|\n"
+for fruit in fruits:
+    name = fruit["name"]
+    price = fruit["price"]
+    if fruit.get('price') >300:
+        lt=f'|{name}|{price}|\n'
+        table +=lt
+        print(table)
+number = 5
+while number > 1:
+    number-=1
+    print(number)
+print(number)
