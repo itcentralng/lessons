@@ -8,6 +8,7 @@
 """ Iterates through an iterable """
 
 students = ['Moha', 'KB', 'Ishaq', 'Kassandrah', 'Jabir','hb']
+students = ['Moha', 'KB', 'Ishaq', 'Kassandrah', 'Jabir']
 
 for i in students:
 	if 'b' in i.lower():
@@ -20,6 +21,7 @@ orders = [
 		"customer": "John", 
 		"items": ["apple", "orange"], 
 		"status": "", 
+		"status": "pending", 
 		"payment": ""
 	},
 	{
@@ -88,6 +90,7 @@ for student in students:
 	table+='\n'
 
 print(table)
+
 # CLASS WORK
 
 """
@@ -102,3 +105,34 @@ Loop through the fruits and create a table that displays something like this:
 | Mango| Red   | Sour  |
 ------------------------
 """
+
+
+print('kassandrah')
+
+
+fruits = [
+	{"name": "mango", "color": 'yellow', "taste":"sweet"},
+	{"name": "grape", "color": 'purple', "taste":"sour"},
+	{"name": "avocado", "color": 'green', "taste":"sweet"},
+	{"name": "durian", "color": 'yellow', "taste":"sweet"},
+	{"name": "pear", "color": 'green', "taste":"sweet"},
+]
+
+table = "|Name|color|taste|\n"
+
+namelength = len(fruits[2].get('name'))
+tastelength = len(fruits[2].get('taste'))
+x = table.split('|')
+table = table.replace('Name', x[1].center(namelength, ' ')).replace('taste', x[3].center(tastelength, ' '))
+table += ''.join(['_' for i in range(len(table)-1)])
+table+='\n'
+
+for fruit in fruits:
+	colour = f" {fruit.get('color')}"
+	name = fruit.get('name').center(namelength, ' ')
+	taste = fruit.get('taste').center(tastelength, ' ')
+	content = f"|{name}|{colour}|{taste}|\n"
+	table+=content
+table+= ''.join(['_' for i in range(len(content)-1)])
+
+print(table)

@@ -1,4 +1,3 @@
-"""
 database = {
     "jabir21":
         {"name":"Jabir", "password":"12345"},
@@ -66,7 +65,7 @@ else:
 
 print('\n\n')
 
-
+'''
 Assignment
 
 Q1: Write a program and allows users to login to a system with a phone number and password.
@@ -74,5 +73,77 @@ Q1: Write a program and allows users to login to a system with a phone number an
     If the phone number and password are correct, the program should display a welcome message.
     The program should allow users to enter their phone numbers with or without their country code.
     It should also be able to recognize numbers that are in this format +234 813 123 123.
-"""
+'''
 
+
+
+print('Kassandrah')
+details =['08167095671','passs']
+phone=input('enter phone number')
+password=input('enter phone number')
+if phone in details  :
+    if password in details:
+        print('sucessfull login')
+    else:
+        print('incorrect password, try gain')
+else:
+    print('incorrect phone number')
+    
+    
+print('kbee')
+    
+user={'phone_number':'+2348063599265','password':'1111'}
+phone_number=input('Please Enter your  phone number')
+password=input('Please Enter your password')
+if password == user:
+    if phone_number == user:
+        print('login successful')
+    else:
+        print('Invalid password')
+else:
+    print('Invalid phone number')
+
+
+# CORRECTION
+print("CORRECTION")
+
+users = []
+
+print('Hello, welcome to our app please create an account')
+
+firstname = input("Enter your first name: ")
+lastname = input("Enter your last name: ")
+phone = input("Enter your phone number: ")
+password = input("Choose a password: ")
+
+if phone.startswith('0'):
+    phone = '+234'+phone[1:]
+elif phone.startswith('234'):
+    phone = '+'+phone
+elif phone.startswith('+234'):
+    phone = phone
+else:
+    phone = '+234'+phone
+
+new_user = {'name': firstname+' '+lastname, 'phone':phone, 'password':password}
+
+users.append(new_user)
+
+
+print("You are ready to join our awesomeness "+firstname)
+print("\n")
+print("Login to start......")
+print("\n")
+u = input("Enter your phone number: ")
+u = u.replace(" ", '').strip()
+p = input("Enter your password: ")
+
+if users[0].get('phone').endswith(u):
+    if users[0].get('password') == p:
+        print('Login successfull')
+        print("\n")
+        print("Welcome back "+users[0].get('name').split()[0])
+    else:
+        print('Invalid password')
+else:
+    print("Invalid phone number")

@@ -102,6 +102,10 @@ c = "They have the following methods in common: index, count"
 
 """
 
+
+
+
+
 print("Usman Assignment")
 #Q1
 var1 = "SCHOOL"
