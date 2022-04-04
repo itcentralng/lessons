@@ -122,7 +122,7 @@ tries = 0
 while play:
     if option == 1:
             question = random.choice(questions)
-            submitted_answer = input(question.get('q'))
+            submitted_answer = input(question.get('q')).lower()
             if submitted_answer == str(question.get('a')):
                 tries = tries+1
                 print(f"Will don!!!!...{name}... your get the correct Anwser:\n correct is:---{submitted_answer}---")
