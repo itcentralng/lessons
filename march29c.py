@@ -125,7 +125,7 @@ while play:
             submitted_answer = input(question.get('q')).lower()
             if submitted_answer == str(question.get('a')):
                 tries = tries+1
-                print(f"Will don!!!!...{name}... your get the correct Anwser:\n correct is:---{submitted_answer}---")
+                print(f"Will don!!!!...{name}... you get the correct Anwser:\n correct is:---{submitted_answer}---")
             
             if submitted_answer == question:
                 play = False
