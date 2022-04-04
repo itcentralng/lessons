@@ -31,8 +31,12 @@ option=int(option)
 if option == 1:
     print("Welcome to The Guessing game")
     print(' ')
-if option == 2:
+elif option == 2:
     print("Thank you!....")
+    play = False
+else:
+    print("Invalid Option")
+    play = False
 tries = 0 
 while play:
     if option == 1:
@@ -40,12 +44,12 @@ while play:
             submitted_answer = input(question.get('q'))
             if submitted_answer == str(question.get('a')):
                 tries = tries+1
-                print(f"Will don!!!!...{name}... your get the correct Anwser:\n correct is:---{submitted_answer}---")
+                print(f"Will don!!!!...{name}... your get the correct Anwser:\n correct is: {submitted_answer}")
             
             if submitted_answer == question:
                 play = False
             if submitted_answer != str(question.get('a')):
                 print(f"Oops! try again the correct answer is {question.get('a')}")
                 tries = tries-1
-            print(f'you have  --{tries}-- point\n')
+            print(f'you have  {tries} point\n')
 print(" ")

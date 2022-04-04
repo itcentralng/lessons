@@ -22,37 +22,22 @@ q15= {"q":"having or showing knowledge that is gained by studying is best descri
 
 number_questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10] 
 spelling_questions=[q11,q12, q13, q14, q15]
+questions = {'n':number_questions, 's':spelling_questions}
 score = 0
 name = input('enter your name dear subscriber \n')
 print(f'{name.title()}! welcome to our guessing game')
 chooice = input('kindly enter n for the number game and s for the spelling game \n')
 while play:
-    if chooice=='n':
-        try:
-            question = random.choice(number_questions)
-            submitted_answer = input(question.get('q')+": ")
-            if submitted_answer== str(question.get('a')):
-                score =score+1
-                print(f'Way to go {name}! your answer {submitted_answer} is correct\n')
-            if submitted_answer == 'done':
-                play = False
-            if submitted_answer!=str(question.get('a')):
-                print(f"sorry you lost a point the correct answer is {question.get('a')}")
-                score=score-1
-            print(f'your score so far is {score} points\n')
-        except:print(f'check the question{submitted_answer} again please and provide the correct answer')
-    if chooice=='s':
-        try:
-            question = random.choice(spelling_questions)
-            submitted_answer = input(question.get('q')+": ").lower()
-            
-            if submitted_answer== str(question.get('a')):
-                score =score+1
-                print(f'Way to go {name}! your answer {submitted_answer} is coamrrect\n\n')
-            if submitted_answer == 'done':
-                play = False
-            if submitted_answer!=str(question.get('a')):
-                print(f"sorry you lost a point the correct answer is{question.get('a')}")
-                score=score-1
-            print(f'your score so far is {score} points\n')
-        except:print(f'check the question{submitted_answer} again please and provide the correct answer')
+    try:
+        question = random.choice(questions.get(chooice))
+        submitted_answer = input(question.get('q')+": ")
+        if submitted_answer == 'done':
+            play = False
+        elif submitted_answer== str(question.get('a')):
+            score =score+1
+            print(f'Way to go {name}! your answer {submitted_answer} is coamrrect\n\n')
+        elif submitted_answer!=str(question.get('a')):
+            print(f"sorry you lost a point the correct answer is{question.get('a')}")
+            score=score-1
+        print(f'your score so far is {score} points\n')
+    except:print(f'check the question{submitted_answer} again please and provide the correct answer')
