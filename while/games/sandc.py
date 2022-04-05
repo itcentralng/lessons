@@ -1,5 +1,6 @@
 import json
 from random import choice
+import time
 """
 
 STATE & CAPITAL
@@ -22,18 +23,30 @@ play = True
 
 correct = []
 
+timeallowed = 10
+
 while play:
     state = choice(states)
     states.pop(states.index(state))
     if len(states) == 0:
+        scores = open("scores.json", "r")
+        old_scores = json.loads(scores.read())
+        old_scores[user] = score
+        scores.close()
+        scores = open("scores.json", "w")
+        scores.write(json.dumps(old_scores))
+        scores.close()
+        play = False
         print('Challenge Complete')
+        print(f"{user} you are exiting the game\n")
+        print(f"{user} your score is {score}\n")
         print('---------------------------------\n')
         print(f"{'LEADERBOARD':>20}")
         print('|NAME|SCORE|\n')
         for name, score in old_scores.items():
             print(f"{name}|{score}|\n")
-        play = False
     else:
+        start = time.time()
         capital = input(f"{user} Guess the capital of {state.get('state').get('name')}: ")
         if capital.lower().strip() == state.get('state').get('capital').lower().strip():
             score += 5
@@ -60,6 +73,10 @@ while play:
         else:
             score -= 4
             print(f"{user} you are wrong! you lose 4 points")
+        end = time.time()
+        if end - start > timeallowed:
+            score -= 3
+            print(f"\nTimeout!!! you lose 3 points")
         
 """
 GAME IMPRVOEMENTS
