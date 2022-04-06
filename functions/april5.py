@@ -36,3 +36,18 @@ while play:
 
 # q1 write a function that prints out the result of multiplying 6 and 9 when called
 # q2 write a function that prints out your name when called
+
+
+
+print('Kassandrah')
+def multiplier():
+    num1=6
+    num2=9
+    multi=num1*num2
+    return multi
+# print(multiplier())
+
+def my_name():
+    namee='Kassandrah O.J'
+    return namee
+# print(my_name())
