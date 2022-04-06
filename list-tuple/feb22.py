@@ -12,6 +12,7 @@ Q2: ages = [10, 15, 16, 17. 95]
     using the ages and people list write a code that prints out each person with their appropraite age for example: 
     'Hassan is 10 years old' should be printed in the case of Hassan and 10
 """
+
 print('Kassandrah')
 shoppinglist = ['cake', 'cashew', 'gum']
 
@@ -71,3 +72,20 @@ ages=[10, 15, 16, 17, 95]
 iT='Hello',people[0],'is',ages[0],'years old'
 ('Hello', 'Hassan', 'is', 10, 'years old')
 
+
+print("USMAN")
+
+shoppinglist = ['cake', 'cashew', 'gum']
+
+new_list = []
+for name in shoppinglist:
+        new_name = name.upper()
+        new_list.append(new_name)
+print("befor",shoppinglist)     
+print("after",new_list)
+
+print(" ")
+print("shoppinglist Befor Swapping",shoppinglist)
+shoppinglist = ['cake', 'cashew', 'gum']
+shoppinglist[1],shoppinglist[-1]=shoppinglist[-1],shoppinglist[1]
+print("shoppinglist after Swapping",shoppinglist)
