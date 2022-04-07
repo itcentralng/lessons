@@ -64,7 +64,7 @@ print(multiply())
 
 print ('\n')
 
-def myname():
+def printmyname():
     name ='kbee'
     return name
-print(myname())
+print(printmyname())
