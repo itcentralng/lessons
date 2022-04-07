@@ -68,3 +68,21 @@ def printmyname():
     name ='kbee'
     return name
 print(printmyname())
+print(" ")
+
+print("Usman")
+print(" ")
+def Add_Mult():
+    A = 9
+    B = 5
+    C = 9
+    D = A+B*C
+    return D
+print(Add_Mult())
+print(" ")
+def suna():
+    ne = "usman "
+    baba = "Abba usman"
+    sunana = ne+baba
+    return sunana
+print(suna())
