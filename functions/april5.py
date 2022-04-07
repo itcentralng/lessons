@@ -86,3 +86,4 @@ def suna():
     sunana = ne+baba
     return sunana
 print(suna())
+print(" ")
