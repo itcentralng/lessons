@@ -51,3 +51,20 @@ def my_name():
     namee='Kassandrah O.J'
     return namee
 # print(my_name())
+
+
+print('kbee')
+
+def multiply():
+    x = 9
+    y = 6
+    z = x * y
+    return z
+print(multiply())
+
+print ('\n')
+
+def myname():
+    name ='kbee'
+    return name
+print(myname())
