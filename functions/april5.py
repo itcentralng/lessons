@@ -56,10 +56,7 @@ def my_name():
 print('kbee')
 
 def multiply():
-    x = 9
-    y = 6
-    z = x * y
-    return z
+    return 6 * 9
 print(multiply())
 
 print ('\n')
