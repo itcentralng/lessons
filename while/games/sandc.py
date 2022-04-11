@@ -26,33 +26,9 @@ correct = []
 timeallowed = 10
 
 while play:
-    state = choice(states)
-    states.pop(states.index(state))
-    if len(states) == 0:
-        scores = open("scores.json", "r")
-        old_scores = json.loads(scores.read())
-        old_scores[user] = score
-        scores.close()
-        scores = open("scores.json", "w")
-        scores.write(json.dumps(old_scores))
-        scores.close()
-        play = False
-        print('Challenge Complete')
-        print(f"{user} you are exiting the game\n")
-        print(f"{user} your score is {score}\n")
-        print('---------------------------------\n')
-        print(f"{'LEADERBOARD':>20}")
-        print('|NAME|SCORE|\n')
-        for name, score in old_scores.items():
-            print(f"{name}|{score}|\n")
-    else:
-        start = time.time()
-        capital = input(f"{user} Guess the capital of {state.get('state').get('name')}: ")
-        if capital.lower().strip() == state.get('state').get('capital').lower().strip():
-            score += 5
-            print(f"{user} you are correct! you get 5 points")
-            correct.append(state)
-        elif capital == 'exit':
+        state = choice(states)
+        states.pop(states.index(state))
+        if len(states) == 0:
             scores = open("scores.json", "r")
             old_scores = json.loads(scores.read())
             old_scores[user] = score
@@ -61,6 +37,7 @@ while play:
             scores.write(json.dumps(old_scores))
             scores.close()
             play = False
+            print('Challenge Complete')
             print(f"{user} you are exiting the game\n")
             print(f"{user} your score is {score}\n")
             print('---------------------------------\n')
@@ -68,16 +45,57 @@ while play:
             print('|NAME|SCORE|\n')
             for name, score in old_scores.items():
                 print(f"{name}|{score}|\n")
+        else:
+            start = time.time()
+            capital = input(f"{user} Guess the capital of {state.get('state').get('name')}: ")
+            if capital.lower().strip() == state.get('state').get('capital').lower().strip():
+                score += 5
+                print(f"{user} you are correct! you get 5 points")
+                correct.append(state)
+            elif capital == 'exit':
+                
+                # play = False
+                # print(f"{user} you are exiting the game\n")
+                # print(f"{user} your score is {score}\n")
+                # print('---------------------------------\n')
+                # print(f"{'LEADERBOARD':>20}")
+                # print('|NAME|SCORE|\n')
+
+def showLeaderboard():
+        print('__________________________\n')
+        print('       LEADERBOARD        \n')
+        print('__________________________\n')
+        print('|     NAME     |   SCORE  \n')
+        print('|   Ahmad Sani |    50    \n')
+        print('__________________________\n')
+
+        play = False
+
+        while play:
+            answer = input("Enter your answer here: ")
+            if answer == "1":
+                print("Oops! Wrong answer\n")
+                showLeaderboard()
+            elif answer == "2":
+                print("Nice! you are right\n")
+                showLeaderboard()
+            else:
+                print("Game Over!!!\n")
+                showLeaderboard()
+                play = False
+
+                for name, score in old_scores.items():
+                    print(f"{name}|{score}|\n")
 
 
         else:
-            score -= 4
-            print(f"{user} you are wrong! you lose 4 points")
-        end = time.time()
-        if end - start > timeallowed:
-            score -= 3
-            print(f"\nTimeout!!! you lose 3 points")
-        
+                score -= 4
+                print(f"{user} you are wrong! you lose 4 points")
+                end = time.time()
+                if end - start > timeallowed:
+                    score -= 3
+                print(f"\nTimeout!!! you lose 3 points")
+            
 """
 GAME IMPRVOEMENTS
 
