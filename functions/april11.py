@@ -65,5 +65,18 @@ for transaction in transactions:
     items=','.join([item.get('name') for item in transaction.get('items')])
     print(f"{name} - {get_duration(transaction)} days ago -{items}")
 
+print('?')
+def dates(hours):
+    current='2022-4-11'
+    return int(current.split('-')[0]) - int(hours.split('-')[0])
+current='2022-4-11'
+print(f"|{'NAME':<10}|{'DATE':<5}|{'ITEMS':<6}|{'HOURS':<6}|\n")
 
+for transaction in transactions:
+    name = transaction['customer']
+    _date =transaction['date']
+    _items = transaction.get('items')[0].get('name')
+    hours=int(current.split('-')) - (transactions[0]['date'],transactions[1]['date'],transactions[2]['date'].split('-'))
+
+    print+= f"|{name:<8}|{_date:<8}|{_items:<6}|{hours:<6}\n"
 
