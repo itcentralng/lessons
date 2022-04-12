@@ -42,6 +42,33 @@ transactions = [
 # Define a function that returns how long ago a transaction is performed give the date it was performed
 # Print out all the transactions in this format: Kabir - 2hours ago - Cake, Biscuit
 
+def time_ago(date):
+    """
+    Function takes a date argument as string in this format 2020-10-10
+    and returns how long it has been in comparison to the current date
+    """
+    current_date = "2022-04-12"
+    current_date = current_date.split('-') #  ['2022', '04', '12']
+    current_year = int(current_date[0])
+    current_month = int(current_date[1])
+    current_day = int(current_date[2])
+    date = date.split('-') # ['2022', '04', '12']
+    year = int(date[0])
+    month = int(date[1])
+    day = int(date[2])
+    days = ((current_year - year)*365) + ((current_month-month)*30) + (current_day - day)
+    return days
+
+for transaction in transactions:
+    # Kabir - 2hours ago - Cake, Biscuit
+    name = transaction.get('customer').split()[0]
+    duration = time_ago(transaction.get('date'))
+    items = [item.get('name') for item in transaction.get('items')]
+    items = ', '.join(items)
+    content = f'{name} - {duration} days ago - {items}'
+    print(content)
+
+print("\n\n")
 
 
 def get_duration(transaction):
@@ -70,6 +97,4 @@ for transaction in transactions:
     name = transaction.get('customer')
     items=','.join([item.get('name') for item in transaction.get('items')])
     print(f"{name} - {get_duration(transaction)} -{items}")
-
-
 
