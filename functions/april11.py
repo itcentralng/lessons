@@ -52,18 +52,24 @@ def get_duration(transaction):
     c_cyear=current.split('-')[0]
     d_day=transaction.get('date').split('-')[2]
     c_cday=current.split('-')[2]
-    year_difference=(int(c_cyear)-int(b_year)) *365
+    year_difference=(int(c_cyear)-int(b_year))
     month_difference =int(c_cmonth)-int(b_month)
     day_diefference=int(c_cday)-int(d_day)
-    diffe=month_difference*30+ day_diefference + year_difference
-    return diffe
+    duration = ''
+    if year_difference > 0:
+        duration+= f'{year_difference} years '
+    if month_difference > 0:
+        duration+= f'{month_difference} months '
+    if day_diefference > 0:
+        duration+= f'{day_diefference} days '
+    return duration
 
 
 for transaction in transactions:
     # print(get_duration(transaction))
     name = transaction.get('customer')
     items=','.join([item.get('name') for item in transaction.get('items')])
-    print(f"{name} - {get_duration(transaction)} days ago -{items}")
+    print(f"{name} - {get_duration(transaction)} -{items}")
 
 
 
