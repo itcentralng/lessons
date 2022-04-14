@@ -129,5 +129,5 @@ for transaction in transactions:
     duration = time_ago(transaction.get('date'))
     items = [item.get('name') for item in transaction.get('items')]
     items = ', '.join(items)
-    content = f'{name} - {duration} days ago - {items}'
+    content = f'{name} - {duration} ago, - {items}'
     print(content)
