@@ -108,3 +108,35 @@ for transaction in transactions:
 def greetings(name):
     return f'hello {name}'
 print(greetings('kassandrah'))
+print('kbee')
+def time_ago(date):
+    """
+    Function takes a date argument as string in this format 2020-10-10
+    and returns how long it has been in comparison to the current date
+    """
+    current_date = "2022-04-12"
+    current_date = current_date.split('-') #  ['2022', '04', '12']
+    current_year = int(current_date[0])
+    current_month = int(current_date[1])
+    current_day = int(current_date[2])
+    date = date.split('-') # ['2022', '04', '12']
+    year = int(date[0])
+    month = int(date[1])
+    day = int(date[2])
+    duration = ''
+    if current_year > 0:
+        duration+= f'{current_year - year} years '
+    if current_month > 1:
+        duration+= f'{current_month - month} months '
+    if current_day > 2:
+        duration+= f'{current_day - day} days '
+    return duration
+
+for transaction in transactions:
+    # Kabir - 2hours ago - Cake, Biscuit
+    name = transaction.get('customer').split()[0]
+    duration = time_ago(transaction.get('date'))
+    items = [item.get('name') for item in transaction.get('items')]
+    items = ', '.join(items)
+    content = f'{name} - {duration} ago, - {items}'
+    print(content)
