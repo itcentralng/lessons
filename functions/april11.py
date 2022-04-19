@@ -98,3 +98,13 @@ for transaction in transactions:
     items=','.join([item.get('name') for item in transaction.get('items')])
     print(f"{name} - {get_duration(transaction)} -{items}")
 
+
+# def greetings():
+#     name=input('enter your name ')
+#     k=f"hello {name}"
+#     return k
+# print(greetings())
+
+def greetings(name):
+    return f'hello {name}'
+print(greetings('kassandrah'))
