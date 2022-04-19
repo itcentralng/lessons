@@ -32,3 +32,13 @@ for transaction in transactions:
     content = f'{name} - {duration} days ago - {items}'
     print(content)
 
+def get_years(date):
+    """
+    Function takes a date argument as string in this format 2020-10-10
+    and returns how long it has been in comparison to the current date in years
+    """
+    current_date = arrow.now().timestamp()
+    date = arrow.get(date).timestamp()
+    seconds_to_year = 86400*365
+    years = int((current_date - date)/seconds_to_year)
+    return years
