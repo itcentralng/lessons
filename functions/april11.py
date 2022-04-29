@@ -99,6 +99,15 @@ for transaction in transactions:
     print(f"{name} - {get_duration(transaction)} -{items}")
 
 
+# def greetings():
+#     name=input('enter your name ')
+#     k=f"hello {name}"
+#     return k
+# print(greetings())
+
+def greetings(name):
+    return f'hello {name}'
+print(greetings('kassandrah'))
 print('kbee')
 def time_ago(date):
     """

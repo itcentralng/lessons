@@ -1,19 +1,18 @@
-# class Student():
-#     def __init__(self, name, age, school):
-#         self.name = name
-#         self.age = age
-#         self.school = school
+class Student():
+    def __init__(self, name, age, school):
+        self.name = name
+        self.age = age
+        self.school = school
 
-# student1 = Student('Qasim Jibrilu', 15, 'Jamal International')
-# student2 = Student('Mohammad Bishir', 25, 'Alqalam International')
-# student3 = Student('Mustapha Abubakar', 16, 'Lessons Academy')
+student1 = Student('Qasim Jibrilu', 15, 'Jamal International')
+student2 = Student('Mohammad Bishir', 25, 'Alqalam International')
+student3 = Student('Mustapha Abubakar', 16, 'Lessons Academy')
 
-# print(student1.name)
-# print(student2.name)
-# print(student3.name)
+print(student1.name)
+print(student2.name)
+print(student3.name)
 
-from april14 import get_years
-
+#from april14 import get_years
 
 class Student():
     def __init__(self, name, dob, level, school):
@@ -22,7 +21,7 @@ class Student():
         self.school = school
         self.age = get_years(self.dob)
         self.classmates = []
-        self.level = level
+        self.level = level 
     def add_classmate(self, student):
         """
         The add_classmethode takes student which is another object of the class Student
@@ -96,3 +95,66 @@ person6 = person('kasandra  ','jonah',"2001-12-30", "Edo")
 person7 = person('Amrah  ','muhammad',"1999-03-21", "kaduna")
 
 print(f'{person1.f_name}{person1.l_name} { person1.dob} { person1.S_O_O}')
+
+print('Kassandrah')
+class Person():
+    def __init__(self,firstname,lastname,dob, state_of_origin,):
+        self.lastname=lastname
+        self.firstname=firstname
+        self.dob=dob
+        self.state_of_origin=state_of_origin
+        self.hobbies=[]
+        self.parents=[]
+        self.siblings=[]
+        self.dob = get_years(self.dob)
+    def add_hobbies(self,hobby):
+        self.hobbies.append(hobby)
+        """
+     The hobbies function takes in a hobby which is another object of the class Student
+        """
+    def show_hobbies(self):
+        hobbies = ", ".join(self.hobbies)
+        return f"{self.lastname}'s hobbies are {hobbies}"
+    def add_parents(self,parent):
+            self.parents.append(parent)
+    """the add_parent function takes parent information of the specified person which is an instance 
+        of the class person.
+        """
+    def show_parent(self):
+        parents=[parent.firstname for parent in self.parents]
+        parents=" , ".join(parents)
+        return f"{self.lastname}'s parents are {parents}"
+    def add_sibling(self,sibling):
+        if self.lastname == sibling.lastname and self.state_of_origin == sibling.state_of_origin:
+            self.siblings.append(sibling)
+            sibling.siblings.append(self)
+            for sibling in self.siblings:
+                if sibling  not in self.siblings:
+                 # add all siblings of self to sibling
+                    sibling.siblings += self.siblings
+                 # add all siblings of sibling to self
+                    self.siblings += sibling.siblings
+    def show_sibling(self):
+        siblings = [sibling.firstname for sibling in self.siblings]
+        siblings=" , ".join(siblings)
+        return f"{self.firstname}'s siblings are {siblings}"
+
+person1 = Person('Qasim ','Jibrilu', "1990-01-01", 'katsina')
+person2=Person('kabirah','Jibrilu', "1995-01-01", 'katsina')
+person3=Person('Jibrilu ','Qasim', "1999-06-17", 'kaduna')
+person4=Person('Nasir ','Jibrilu', "1890-11-01", 'katsina')
+person5=Person('Yasir ','Jibrilu', "1890-11-01", 'katsina')
+print(person1.firstname)
+print(person2.dob)
+print(person3.firstname)
+print(person4.dob)
+
+person1.add_hobbies('Eating rice')
+person1.add_hobbies('Running in the morning')
+person2.add_sibling(person4)
+person1.add_sibling(person2)
+person2.add_sibling(person5)
+print(person2.show_sibling())
+print(person1.show_sibling())
+print(person1.show_hobbies())
+
