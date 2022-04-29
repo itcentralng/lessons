@@ -1,6 +1,7 @@
 # FUNCTION CONTINUATION
 
-from datetime import datetim
+from datetime import datetime
+import arrow
 
 transactions = [
     {'customer':'Kabir Abubakar', 'date':'2020-03-01', 'items':[{'name':'Cup Cake', 'price':250, 'unit':10}]},
