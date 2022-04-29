@@ -45,6 +45,8 @@ print(student2.name)
 print(student2.age)
 print(student3.name)
 print(student3.age)
+
+
 student1.add_classmate(student2)
 student1.add_classmate(student3)
 student1.add_classmate(student4)
@@ -69,3 +71,28 @@ print(student1.show_classmates())
     (b) The class should have a method that when called will add cars of the same model and year together
     (c) The class should also have a method that shows all related cars
 """
+
+class person():
+    def __init__(self, firstname, lastname, dob, state_of_origin):
+        self.f_name = firstname
+        self.l_name = lastname
+        self. dob = dob
+        self. S_O_O = state_of_origin
+        self. hobbies  = []
+    def add_hobby (self, person):
+       if self. f_name == person.hobby and self.l_name == person.hobby:
+           self.hobbies .append(person)
+    def show_hobbies (self):
+        hobbys = [person. firstname and person. lastname for person in self.hobbies ]
+        hobbys = ", ".join(hobbys)
+        return 'My Hobbies are: '+hobbys
+
+person1 = person('Usman ','Abba Usman',"2000-01-01", "Borno")
+person2 = person('kabiru ','Abubakar',"1995-06-03", "kaduna")
+person3 = person('muhammad ','Bashir',"1994-12-01", "kaduna")
+person4 = person('nasir ','mustapha',"1987-05-07", "kasina")
+person5 = person('Mustapha ','Abubakar',"1990-06-08", "kaduna")
+person6 = person('kasandra  ','jonah',"2001-12-30", "Edo")
+person7 = person('Amrah  ','muhammad',"1999-03-21", "kaduna")
+
+print(f'{person1.f_name}{person1.l_name} { person1.dob} { person1.S_O_O}')
